@@ -1,0 +1,146 @@
+body,
+html,
+h1,
+h3,
+p,
+.container {
+  margin: 0%;
+  // padding: 0%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.header {
+  &__logo {
+    @include header-logo;
+  }
+}
+//  part1
+.part1 {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 1rem 0;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+  border-top: 4px solid rgb(235, 234, 234);
+  padding: 1.2rem 0rem;
+  font-size: 18px;
+  font-weight: bold;
+
+  &__title {
+    margin-left: 0.5rem;
+  }
+}
+.titles {
+  text-align: center;
+  background-color: #fafafa;
+  padding-bottom: 5rem;
+  &__title {
+    font-size: 0.7rem;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(148, 147, 147);
+    margin-bottom: 2rem;
+  }
+
+  .titles__a {
+    @include btn-part1;
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+  &__a:hover{
+    opacity: 0.9;
+    box-shadow: 0.25rem 0.25rem 10px rgb(14, 8, 8);
+}
+}
+// part2 les trois boutons
+.part2 {
+  margin-bottom: 3rem;
+  padding: 0%;
+  &__title {
+    padding-left: 3rem;
+  }
+}
+
+//  part3 les cartes
+.part3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f3f3f3;
+
+  &__title {
+    padding: 1rem 0rem 0rem 2.8rem;
+  }
+ 
+
+  &__cartes {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin: 0rem 1.5rem;
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .carte {
+    position: relative;
+    background-color: #fff;
+    border-radius: 1rem;
+    height: 280px;
+    width: 100%;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    color: inherit;
+    display: block;
+  }
+  .carte__img {
+    width: 100%;
+    height: 190px;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+  }
+  .carte__badge {
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+  .part3__heart {
+    position: absolute;
+    left: 88%;
+    margin-top: 4%;
+    font-size: 1.8rem;
+    @include heart-default;
+    &:hover {
+      @include heart-hover;
+      animation: heart-animation 500ms;
+
+    }
+    
+  }
+  .part3__titles {
+    margin: 4% 0 3% 4%;
+   font-size: 18px;
+   &__h3{
+    padding-bottom: 0.4rem;
+   }
+  }
+  //  footer
+  .footer {
+    @include footer;
+  }
+}

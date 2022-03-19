@@ -1,0 +1,90 @@
+// boutton explorer et commander page accueil
+@mixin btn-part1 {
+  color: white;
+  border-radius: 10rem;
+  cursor: pointer;
+  box-shadow: $box-shadow-default;
+  text-decoration: none;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  
+}
+
+// bouttons page d'acceuil part2
+@mixin btn-part2 {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  box-shadow: $box-shadow;
+
+}
+
+// boutons accueil
+.container {
+  &__listes {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @media (min-width: 900px) {
+      display: flex;
+      justify-content: space-around;
+  
+    }
+  }
+  // bouttons page d'acceuil part2
+
+  &__liste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    @include btn-part2;
+    padding: 1.3rem 5rem 1.3rem 5rem;
+    border-radius: 1rem;
+    background-clip: border-box;
+    z-index: 1;
+  
+    &:hover {
+      background-color: lighten($color: $color-primary, $amount: 32);
+      i {
+        color: $color-primary;
+      }
+    }
+ }
+  &__icone {
+    margin-right: 1rem;
+  }
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    color: white;
+    background-color: $color-primary;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    top: 2.6rem;
+    right: 0.7rem;
+    z-index: 1;
+  }
+}
+// boutons " commander" page restaurants
+.btn {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  &__commander {
+    @include btn-part1;
+    padding: 1rem 4rem;
+    &:hover{
+      filter: brightness(1.1);
+      box-shadow:$box-shadow;
+  }
+}
+}

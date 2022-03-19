@@ -1,0 +1,115 @@
+//  loader page d'acceuil
+.loader-container {
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  animation: loader-out 5s ease-out both;
+  .loader {
+    display: inline-block;
+    position: fixed;
+    left: 40%;
+    top: 25%;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background-color: $color-primary;
+ 
+  @media (min-width:900px) {
+    left: 45%;
+  }
+  @media (min-width:1500px) {
+    left: 47%;
+    top: 52%;
+  }
+}
+  .loader div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    
+ 
+  }
+  .loader div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .loader div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .loader div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0s;
+  }
+  @keyframes loader {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50% {
+      top: 24px;
+      height: 32px;
+    }
+    100% {
+      top: 24px;
+      height: 32px;
+    }
+   }
+
+  @keyframes loader-out {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+// l'animation sur les coeurs
+@keyframes heart-animation{
+  0% {
+    opacity: 0;
+  }
+  35%{
+    opacity: .5;
+  }
+  50%{ 
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// animation rotation des icones
+@keyframes rotation-icone {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+// animation apparition des submenus
+@keyframes submenu-appear{
+0%{
+  transform: translatey(60%);
+    opacity: 0;
+}
+100%{
+  transform: translatey(0%);
+  opacity: 1;
+}
+}

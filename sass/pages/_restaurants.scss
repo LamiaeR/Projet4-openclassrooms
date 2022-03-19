@@ -1,0 +1,174 @@
+body,
+html,
+h1,
+h3 {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.header {
+  @include header-logo;
+  display: flex;
+  justify-content: center;
+}
+.fleche-retour {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 2%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+
+@media (min-width:1300px){
+  top:2.9%;
+} 
+}
+
+.img {
+  height: 35rem;
+  width: 100%;
+  object-fit: cover;
+}
+.restaurant {
+  position: relative;
+  margin-top: -5rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  @media (min-width: 900px) {
+    margin: 0rem 2rem;
+    margin-top: -5rem;
+  }
+  &__menu {
+    padding: 1.5rem 2rem 0 1rem;
+    display: flex;
+    justify-content:space-between;
+  }
+  &__coeur{
+position: absolute;   
+ left: 87%;
+ top: 4.6%;
+ @include heart-default;
+ font-size: 2rem;
+ &:hover{ 
+ @include  heart-hover;
+}
+@media (min-width:900px) {
+  left: 95%;
+  top: 9.3%;
+
+}
+  }
+  &__title {
+    font-family: "Shrikhand", "cursive";
+    font-size:2rem;
+  }
+}
+.touts_les_submenus {
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.submenus {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  @media (min-width: 900px) {
+    width: 100%;
+  }
+  &__title {
+    margin-top:0.6rem;
+    margin-left: 1rem;
+    margin-bottom: 0.9rem;
+    font-size: 20px;
+    color: #9c9c9c;
+  }
+  &__title::after {
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99e2d0;
+    position: absolute;
+    margin-top: 5px;
+  }
+}
+// Les boutons des menu
+.submenu {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  margin: 0.3rem;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  white-space: nowrap; 
+  animation: submenu-appear 3s;
+
+  &:hover .menuelement__confirmation {
+    margin-right: -1rem;
+   }
+  &:hover .menuelement__confirmation {
+    i {
+      animation: rotation-icone 500ms ease;
+/*       transform: rotate (180deg);
+ */    }
+  }
+}
+.menuelement {
+white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  &__title {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &__subtitle {
+    color: #727070;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &__price {
+    margin-left: auto;
+    margin-right: 0%;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    padding: 0rem 1.5rem 0rem 0rem;
+  }
+
+  &__confirmation {
+    background-color: $color-tertiary;
+    margin: -1rem -5rem -1rem -1rem;
+    width: 4rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  &__icon {
+    -webkit-text-fill-color: white;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 1.4rem;
+    left: 1rem;
+    /* height: 1.5rem;
+    width: 1.5rem; */
+  }
+}
+.footer {
+  @include footer;
+}
