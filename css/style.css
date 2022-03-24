@@ -108,7 +108,7 @@
     opacity: 0;
   }
   100% {
-    transform: translatey(50%);
+    transform: translatey(10%);
     opacity: 1;
   }
 }
@@ -397,7 +397,7 @@ h3 {
 }
 
 .img {
-  height: 35rem;
+  height: 20rem;
   width: 100%;
   object-fit: cover;
 }
@@ -456,6 +456,49 @@ h3 {
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.submenus .submenu-1 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 120ms;
+}
+.submenus .submenu-2 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 240ms;
+}
+.submenus .submenu-3 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 360ms;
+}
+.submenus .submenu-4 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 480ms;
+}
+.submenus .submenu-5 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 600ms;
+}
+.submenus .submenu-6 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 720ms;
+}
+.submenus .submenu-7 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 840ms;
+}
+.submenus .submenu-8 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 960ms;
+}
+.submenus .submenu-9 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 1080ms;
+}
+.submenus .submenu-10 {
+  animation: submenu-appear 1s ease-out both;
+  animation-delay: 1200ms;
 }
 @media (min-width: 900px) {
   .submenus {
@@ -490,7 +533,6 @@ h3 {
   transition-duration: 0.4s;
   overflow: hidden;
   white-space: nowrap;
-  animation: submenu-appear 3s;
 }
 .submenu:hover .menuelement__confirmation {
   margin-right: -1rem;
@@ -541,8 +583,6 @@ h3 {
   align-items: center;
   top: 1.4rem;
   left: 1rem;
-  /* height: 1.5rem;
-  width: 1.5rem; */
 }
 
 .footer {

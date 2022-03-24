@@ -29,7 +29,7 @@ h3 {
 }
 
 .img {
-  height: 35rem;
+  height: 20rem;
   width: 100%;
   object-fit: cover;
 }
@@ -78,7 +78,15 @@ position: absolute;
   display: flex;
   flex-direction: column;
   margin: 1rem;
-
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  @for $i from 1 through 10{
+    .submenu-#{$i} {
+      animation: submenu-appear 1s ease-out both;
+      animation-delay: 120ms * $i;
+} 
+ }
   @media (min-width: 900px) {
     width: 100%;
   }
@@ -111,7 +119,7 @@ position: absolute;
   transition-duration: 0.4s;
   overflow: hidden;
   white-space: nowrap; 
-  animation: submenu-appear 3s;
+   
 
   &:hover .menuelement__confirmation {
     margin-right: -1rem;
@@ -126,6 +134,8 @@ position: absolute;
 white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+ 
+
   &__title {
     font-size: 18px;
     white-space: nowrap;
@@ -164,10 +174,10 @@ white-space: nowrap;
     align-items: center;
     top: 1.4rem;
     left: 1rem;
-    /* height: 1.5rem;
-    width: 1.5rem; */
+    
   }
 }
 .footer {
   @include footer;
 }
+ 
