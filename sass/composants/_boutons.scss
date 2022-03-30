@@ -16,7 +16,10 @@
   cursor: pointer;
   background-color: #f6f6f6;
   box-shadow: $box-shadow;
+  @media (min-width: 700px) and (max-width:768px){
+    padding: 1.3rem 13.6rem 1.3rem 13.6rem;
 
+  }
 }
 
 // boutons accueil
@@ -28,17 +31,17 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-    @media (min-width: 700px) {
+    @media (min-width: 768px) {
       display: flex;
       justify-content: space-around;
-      margin-left: 10%;
-      margin-right: 10%;
+
     }
     @media (min-width: 900px) {
       display: flex;
       justify-content: space-around;
     }
   }
+
   // bouttons page d'acceuil part2
 
   &__liste {
