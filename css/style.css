@@ -270,9 +270,14 @@ p,
 .part2__title {
   padding-left: 3rem;
 }
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .part2__title {
-    padding-left: 10.2rem;
+    padding-left: 13rem;
+  }
+}
+@media (min-width: 992px) {
+  .part2__title {
+    padding-left: 7rem;
   }
 }
 
