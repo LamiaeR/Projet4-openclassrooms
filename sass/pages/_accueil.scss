@@ -67,8 +67,11 @@ p,
   padding: 0%;
   &__title {
     padding-left: 3rem;
+    @media (min-width: 700px){ 
+    padding-left:10.2rem;
   }
 }
+ }
 
 //  part3 les cartes
 .part3 {

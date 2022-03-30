@@ -270,6 +270,11 @@ p,
 .part2__title {
   padding-left: 3rem;
 }
+@media (min-width: 700px) {
+  .part2__title {
+    padding-left: 10.2rem;
+  }
+}
 
 .part3 {
   display: flex;
