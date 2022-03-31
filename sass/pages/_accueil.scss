@@ -65,11 +65,9 @@ p,
 .part2 {
   margin-bottom: 3rem;
   padding: 0%;
+  width:100%;
   &__title {
     padding-left: 3rem;
- @media (min-width: 768px){ 
-  padding-left:4.2rem;
- }
   }
    }
   
@@ -92,7 +90,7 @@ p,
     column-gap: 2rem;
     row-gap: 2rem;
     margin: 0rem 1.5rem;
-    @media (min-width: 900px) {
+    @media (min-width: 768.9px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
