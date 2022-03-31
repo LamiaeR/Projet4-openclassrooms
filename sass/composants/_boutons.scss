@@ -12,45 +12,40 @@
 // bouttons page d'acceuil part2
 @mixin btn-part2 {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   cursor: pointer;
   background-color: #f6f6f6;
   box-shadow: $box-shadow;
-  @media (min-width: 700px) and (max-width:768px){
-    padding: 1.3rem 13.6rem 1.3rem 13.6rem;
-
-  }
 }
 
 // boutons accueil
 .container {
   &__listes {
-    padding: 0rem 1rem;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: space-around;
+    flex-direction:column;
+    margin: auto;
+    @media (min-width: 768.9px){
+      flex-direction:row;
+
 
     }
-    @media (min-width: 900px) {
-      display: flex;
-      justify-content: space-around;
-    }
+
   }
 
   // bouttons page d'acceuil part2
 
   &__liste {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
     @include btn-part2;
-    padding: 1.3rem 5rem 1.3rem 5rem;
+    // padding: 1.3rem 5rem 1.3rem 5rem;
+    padding: 1rem 0rem 1rem 0rem;
+    width: 90%;
+    margin-left: 5%;
     border-radius: 1rem;
     background-clip: border-box;
     z-index: 1;
@@ -61,6 +56,10 @@
         color: $color-primary;
       }
     }
+    @media (min-width: 768.9px){
+      width: 26%;
+
+ }
  }
   &__icone {
     margin-right: 1rem;
@@ -75,9 +74,8 @@
     border-radius: 50%;
     height: 1.5rem;
     width: 1.5rem;
-    position: relative;
-    top: 2.6rem;
-    right: 0.7rem;
+    position: absolute;
+    left: -2%;
     z-index: 1;
   }
 }
